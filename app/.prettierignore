@@ -1,0 +1,19 @@
+# Build artifacts & cache
+node_modules
+dist
+.svelte-kit
+target
+src-tauri/target
+src-tauri/gen
+*.lock
+
+# OS & Editor
+.DS_Store
+.vscode
+.idea
+*.swp
+*.swo
+
+# Generated/Unformatted
+static
+public

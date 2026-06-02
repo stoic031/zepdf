@@ -1,0 +1,62 @@
+{
+  "name": "app",
+  "version": "0.1.0",
+  "description": "",
+  "type": "module",
+  "scripts": {
+    "dev": "vite dev",
+    "build": "vite build",
+    "preview": "vite preview",
+    "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+    "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
+    "tauri": "tauri",
+    "lint": "eslint . --fix",
+    "format": "prettier --write ."
+  },
+  "lint-staged": {
+    "*.{js,ts,svelte}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{css,json,md}": [
+      "prettier --write"
+    ],
+    "src-tauri/**/*.rs": "cargo fmt --manifest-path src-tauri/Cargo.toml",
+    "src-tauri/**/*.toml": "cargo fmt --manifest-path src-tauri/Cargo.toml"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@nanostores/persistent": "^1.3.4",
+    "@tauri-apps/api": "^2",
+    "@tauri-apps/plugin-dialog": "^2.7.1",
+    "@tauri-apps/plugin-fs": "^2.5.1",
+    "@tauri-apps/plugin-opener": "^2",
+    "@tauri-apps/plugin-shell": "^2.3.5",
+    "clsx": "^2.1.1",
+    "lucide-svelte": "^1.0.1",
+    "nanostores": "^1.3.0",
+    "pdfjs-dist": "^6.0.227",
+    "tailwind-merge": "^3.6.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@sveltejs/adapter-static": "^3.0.6",
+    "@sveltejs/kit": "^2.9.0",
+    "@sveltejs/vite-plugin-svelte": "^5.0.0",
+    "@tailwindcss/vite": "^4.3.0",
+    "@tauri-apps/cli": "^2",
+    "@types/node": "^25.9.1",
+    "eslint": "^10.4.1",
+    "eslint-plugin-svelte": "^3.19.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^17.0.7",
+    "prettier": "^3.8.3",
+    "prettier-plugin-svelte": "^4.1.0",
+    "prettier-plugin-tailwindcss": "^0.8.0",
+    "svelte": "^5.0.0",
+    "svelte-check": "^4.0.0",
+    "tailwindcss": "^4.3.0",
+    "typescript": "~5.6.2",
+    "vite": "^6.0.3"
+  }
+}
