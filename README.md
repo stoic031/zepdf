@@ -23,7 +23,7 @@
 | **Tooling**         | `just`, `husky v9`, `lint-staged`, ESLint 9, Prettier                                                     |
 
 ## 🗂️ Project Structure
-
+'''
 zepdf/
 ├── app/ # Tauri + Svelte frontend workspace
 │ ├── src/ # Svelte routes, components, UI logic
@@ -33,7 +33,7 @@ zepdf/
 ├── flake.nix # Nix dev shell (Rust, Node, toolchain)
 ├── Justfile # Unified task runner for dev/build/lint
 └── README.md
-
+'''
 ## 🚀 Quick Start
 
 ### Prerequisites
